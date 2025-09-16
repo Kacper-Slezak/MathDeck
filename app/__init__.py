@@ -18,3 +18,11 @@ from models import User
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
+
+from .routes.auth import auth_bp
+#from .routes.teacher import teacher_bp
+#from .routes.student import student_bp
+
+app.register_blueprint(auth_bp, url_prefix='/auth')
+#app.register_blueprint(teacher_bp, url_prefix='/teacher')
+#app.register_blueprint(student_bp, url_prefix='/student')
