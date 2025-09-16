@@ -3,3 +3,5 @@ Flask-SQLAlchemy
 Flask-Migrate
 Flask-Login
 psycopg2-binary
+Flask-WTF
+wtforms
