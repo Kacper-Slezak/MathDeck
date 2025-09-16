@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, url_for, redirect, flash
-from app.forms import RegisterForm, LoginForm
+from app.forms import RegistrationForm, LoginForm
 from app.services.auth import create_new_user, authenticate_user
 from app import db
 from flask_login import login_user, logout_user, login_required, current_user
@@ -24,9 +24,9 @@ def login():
 
 @auth_bp.route('/register')
 def register():
-    from = RegisterForm()
+    form = RegisterForm()
     if form.validate_on_submit():
-        is_teacher - True if form.role.data == 'teacher' else False
+        is_teacher = True if form.role.data == 'teacher' else False
         create_new_user(form.username.data, form.password.data, is_teacher)
         flash('Rejestracja zakończona sukcesem. Możesz się teraz zalogować.', 'success')
         return redirect(url_for('auth.login'))
