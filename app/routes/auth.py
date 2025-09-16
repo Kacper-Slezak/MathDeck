@@ -24,7 +24,7 @@ def login():
 
 @auth_bp.route('/register')
 def register():
-    form = RegisterForm()
+    form = RegistrationForm()
     if form.validate_on_submit():
         is_teacher = True if form.role.data == 'teacher' else False
         create_new_user(form.username.data, form.password.data, is_teacher)
