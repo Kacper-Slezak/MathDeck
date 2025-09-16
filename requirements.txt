@@ -4,4 +4,4 @@ Flask-Migrate
 Flask-Login
 psycopg2-binary
 Flask-WTF
-wtforms
+python-dotenv==1.0.0
