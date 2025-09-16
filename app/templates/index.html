@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block title %}Strona Główna{% endblock %}
+
+{% block content %}
+    <h1>Witaj w Aplikacji Matematycznej!</h1>
+    <p>Proszę, <a href="{{ url_for('auth.login') }}">zaloguj się</a> lub <a href="{{ url_for('auth.register') }}">zarejestruj</a>.</p>
+{% endblock %}
